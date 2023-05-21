@@ -13,13 +13,7 @@ const BlogCard = ({ heading, image, text }: any) => {
       borderRadius="0"
     >
       <CardBody>
-        <Image
-          src={image}
-          alt={heading}
-          w="100%"
-          maxHeight="250px"
-          objectFit="cover"
-        />
+        <Image src={image} alt={heading} w="100%" h="250px" objectFit="cover" />
         <Stack mt="6" spacing="3">
           <Box minH="50px">
             <Heading size="md" color="green.500">
