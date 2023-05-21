@@ -12,7 +12,7 @@ const Navbar = () => {
       w="100vw"
       h="100px"
     >
-      <Container maxW="container.lg" h="100%">
+      <Container maxW="container.xl" h="100%">
         <HStack alignItems="center" h="100%">
           <Image src="/img/logo.svg" alt="LAMBDA škola logo" width="200px" />
           <Spacer />

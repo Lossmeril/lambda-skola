@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Box, HStack, Heading } from "@chakra-ui/layout";
+import { Container, HStack, Heading, Text, Wrap } from "@chakra-ui/layout";
 
 import Navbar from "@/components/Navbar";
 import BlogCard from "@/components/BlogCard";
@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          LAMBDA škola: Když jsi tak šikovný, tak proč studovat jinde?
+          LAMBDA škola: Jestli jsi opravdu tak šikovný, tak proč studovat jinde?
         </title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,14 +22,8 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        <Section>
-          <Box
-            w="50vw"
-            position="absolute"
-            left="0"
-            transform="translate(0, -50%)"
-            px={"100px"}
-          >
+        <Section bgColor="url(/img/zak-ktery-u-nas-stoprocentne-studuje.webp)">
+          <Container maxW="container.xl" pr={12}>
             <Heading as="h1" fontSize="6em" mb={12} lineHeight="0.85em">
               Škola čar a kouzel v Pardubicích
             </Heading>
@@ -39,20 +33,29 @@ export default function Home() {
             <Heading as="p" size="xl" color="green.500">
               Jestli jsi opravdu tak šikovný, tak proč studovat jinde?
             </Heading>
-          </Box>
+            <Text mt={12} color="blackAlpha.600" pr="50%" fontSize="20px">
+              Program zaměřený na vyhrávání co nejvíce soutěží v oblasti
+              programování a IT.
+            </Text>
+            <Text mt={2} color="blackAlpha.600" pr="50%" fontSize="20px">
+              Nechte se učit od zaměstnanců softwarových firem, týpka z České
+              Televize, který naposledy točil film 30 let zpátky a umělce, který
+              squatuje ve škole.
+            </Text>
+          </Container>
         </Section>
 
         <Section bgColor="blackAlpha.100">
-          <Heading textAlign="center" mb={6} mt={12}>
+          <Heading textAlign="center" mb={12}>
             Učitelský sbor LAMBDY
           </Heading>
-          <HStack
+          <Wrap
             alignItems="flex-start"
             maxW="80vw"
             mx="auto"
-            justify="center"
+            justify="space-between"
             my={6}
-            gap={12}
+            spacing={12}
           >
             <Teacher
               name="Ing. Radovan Milánek"
@@ -69,18 +72,28 @@ export default function Home() {
               title="učitel grafiky, školní doktor"
               img="/img/malir.jpg"
             />
-          </HStack>
+            <Teacher
+              name="Ing. Kateřina Milánková"
+              title="zástupkyně ředitele, učitelka ekonimiky, praní peněz"
+              img="/img/milánková.jpg"
+            />
+            <Teacher
+              name="Mgr. Alena Hlohovcová"
+              title="učitelka českého jazyka"
+              img="/img/hlohovcová.jpg"
+            />
+          </Wrap>
         </Section>
 
         <Section>
           <Heading textAlign="center" mb={6} mt={12}>
             Blogísek ředitele Milánka
           </Heading>
-          <HStack
+          <Wrap
             alignItems="flex-start"
             maxW="80vw"
             mx="auto"
-            justify="center"
+            justify="space-between"
           >
             <BlogCard
               heading="MHD Kacys pomohlo najít kluka z autobusu"
@@ -96,7 +109,7 @@ export default function Home() {
               heading="Venda Sigsauer je prostě talent"
               image="https://scontent-lhr8-1.xx.fbcdn.net/v/t1.15752-9/333173556_2150560005141995_5050978864726998452_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=zLh8GGq7HWEAX8jFhKD&_nc_ht=scontent-lhr8-1.xx&oh=03_AdQ2nA4xFjqgFH1HoUdvCl61lrdxcziEaE4_sFmOLShCZg&oe=6491757A"
             />
-          </HStack>
+          </Wrap>
         </Section>
       </main>
     </>
