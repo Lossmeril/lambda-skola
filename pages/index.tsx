@@ -1,9 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import {
+  Container,
+  HStack,
+  Heading,
+  SimpleGrid,
+  VStack,
+} from "@chakra-ui/layout";
 
-const inter = Inter({ subsets: ['latin'] })
+import BlogCard from "@/components/BlogCard";
+
+import BlogDescs from "@/data/blogDescs";
+import Teacher from "@/components/Teacher";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,101 +24,50 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
+      <main>
+        <Heading textAlign="center" mb={6} mt={12}>
+          Učitelský sbor LAMBDY
+        </Heading>
+        <HStack
+          alignItems="flex-start"
+          maxW="80vw"
+          mx="auto"
+          justify="center"
+          my={6}
+          gap={12}
+        >
+          <Teacher name="Radovan Milánek" title="ředitel školy" />
+          <Teacher
+            name="Usb. Jan Prodal, PhDr."
+            title="učitel fyziky, programování, správce kódů pro odpálení nukleárních hlavic"
           />
-        </div>
+          <Teacher
+            name="akademický malíř El Greco"
+            title="učitel grafiky, školní doktor"
+          />
+        </HStack>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        <Heading textAlign="center" mb={6} mt={12}>
+          Blogísek ředitele Milánka
+        </Heading>
+        <HStack alignItems="flex-start" maxW="80vw" mx="auto" justify="center">
+          <BlogCard
+            heading="MHD Kacys pomohlo najít kluka z autobusu"
+            image="https://www.delta-skola.cz/data/blog-posts/images/orig/dopravni-podnik.webp"
+            text={BlogDescs.MHDkacys}
+          />
+          <BlogCard
+            heading="Už nám nesmrdí umyvadlo"
+            image="https://images.unsplash.com/photo-1584961503022-d19acee0af7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=718&q=80"
+            text={BlogDescs.Umyvadlo}
+          />
+          <BlogCard
+            heading="Venda Sigsauer je prostě talent"
+            image=""
+            text={BlogDescs.Umyvadlo}
+          />
+        </HStack>
       </main>
     </>
-  )
+  );
 }
