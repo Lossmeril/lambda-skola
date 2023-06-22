@@ -1695,6 +1695,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/debounce@npm:*":
+  version: 3.0.0
+  resolution: "@types/debounce@npm:3.0.0"
+  checksum: af99f44f8ce90388aa5a909066c64b4ddc5efdff72bccf7dcef1fe8a04f03d03a7a42cc1f42ff14620c66923f92600ccfeb768bd77ad250f12a6ebca116ca719
+  languageName: node
+  linkType: hard
+
+"@types/debounce@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@types/debounce@npm:1.2.1"
+  checksum: bea6d414acefbee50adfe87cee10f8a855d033e4778567ab03bdc3cb2648b6bf9237ca53f4ee76fe4be75f77f86d4688411499626fe409bc870f53631d24231f
+  languageName: node
+  linkType: hard
+
 "@types/debug@npm:^4.0.0":
   version: 4.1.8
   resolution: "@types/debug@npm:4.1.8"
@@ -1838,6 +1852,15 @@ __metadata:
   version: 2.0.6
   resolution: "@types/unist@npm:2.0.6"
   checksum: 25cb860ff10dde48b54622d58b23e66214211a61c84c0f15f88d38b61aa1b53d4d46e42b557924a93178c501c166aa37e28d7f6d994aba13d24685326272d5db
+  languageName: node
+  linkType: hard
+
+"@types/wavesurfer.js@npm:^6.0.6":
+  version: 6.0.6
+  resolution: "@types/wavesurfer.js@npm:6.0.6"
+  dependencies:
+    "@types/debounce": "*"
+  checksum: 732e9985075dfd4a9fa9cfa0dd959a3d4243fa16a7a11abe953a98a9a391a76878e0451f9bf1b8f2356d6822fbf34c8e5b278af60b6818c1c47e1fbe2cc1a5eb
   languageName: node
   linkType: hard
 
@@ -2397,6 +2420,13 @@ __metadata:
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8"
   checksum: d240b7757544460ae0586a341a53110ab0a61126570ef2d8c731e3eab3f0cb6e488e2609e6a69b46727635de49be20b071688698744417ff1b6c1d7ccd03e0de
+  languageName: node
+  linkType: hard
+
+"debounce@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "debounce@npm:1.2.1"
+  checksum: 682a89506d9e54fb109526f4da255c5546102fbb8e3ae75eef3b04effaf5d4853756aee97475cd4650641869794e44f410eeb20ace2b18ea592287ab2038519e
   languageName: node
   linkType: hard
 
@@ -3958,16 +3988,21 @@ __metadata:
     "@mdx-js/loader": ^2.3.0
     "@mdx-js/react": ^2.3.0
     "@next/mdx": ^13.4.7
+    "@types/debounce": ^1.2.1
     "@types/node": 20.2.1
     "@types/react": 18.2.6
     "@types/react-dom": 18.2.4
+    "@types/wavesurfer.js": ^6.0.6
+    debounce: ^1.2.1
     eslint: 8.41.0
     eslint-config-next: 13.4.3
     framer-motion: ^10.12.12
     next: 13.4.3
     react: 18.2.0
     react-dom: 18.2.0
+    react-icons: ^4.10.1
     typescript: 5.0.4
+    wavesurfer.js: ^6.6.4
   languageName: unknown
   linkType: soft
 
@@ -5077,6 +5112,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.10.1":
+  version: 4.10.1
+  resolution: "react-icons@npm:4.10.1"
+  peerDependencies:
+    react: "*"
+  checksum: b6c8d4fe482b112e1041515d93ef7670a0af128855c926052a076b64d0b991cdd4391394b26467100f8da3859db1ebd8f9c6b7614fa5969fde83de45c71031a3
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -5932,6 +5976,13 @@ __metadata:
     unist-util-stringify-position: ^3.0.0
     vfile-message: ^3.0.0
   checksum: 642cce703afc186dbe7cabf698dc954c70146e853491086f5da39e1ce850676fc96b169fcf7898aa3ff245e9313aeec40da93acd1e1fcc0c146dc4f6308b4ef9
+  languageName: node
+  linkType: hard
+
+"wavesurfer.js@npm:^6.6.4":
+  version: 6.6.4
+  resolution: "wavesurfer.js@npm:6.6.4"
+  checksum: cee2a98695241ab08edaab8d7b2a5ac59a428b8c8d79fa9c2692b4f95b15da9a61a7f81cd18114da2b37d59dabf7dc4854d0862bedfa98b2650620f05bea567b
   languageName: node
   linkType: hard
 

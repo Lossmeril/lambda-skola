@@ -18,12 +18,19 @@
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "debounce": "^1.2.1",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "framer-motion": "^10.12.12",
     "next": "13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "react-icons": "^4.10.1",
+    "typescript": "5.0.4",
+    "wavesurfer.js": "^6.6.4"
+  },
+  "devDependencies": {
+    "@types/debounce": "^1.2.1",
+    "@types/wavesurfer.js": "^6.0.6"
   }
 }
