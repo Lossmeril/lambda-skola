@@ -3,8 +3,16 @@ import { Card, CardBody, CardFooter } from "@chakra-ui/card";
 import { Stack, Heading, Text, Box } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { WrapItem } from "@chakra-ui/react";
+import Link from "next/link";
 
-const BlogCard = ({ heading, image, text }: any) => {
+interface IProps {
+  heading: string;
+  image: string;
+  text?: string;
+  link: string;
+}
+
+const BlogCard: React.FC<IProps> = ({ heading, image, text, link }) => {
   return (
     <WrapItem>
       <Card
@@ -32,9 +40,17 @@ const BlogCard = ({ heading, image, text }: any) => {
               <Text py={6}>{text}</Text>
             </Box>
 
-            <Button variant="solid" colorScheme="green" mb={3} borderRadius="0">
-              Číst dále
-            </Button>
+            <Link href={link}>
+              <Button
+                variant="solid"
+                colorScheme="green"
+                mb={3}
+                borderRadius="0"
+                width="100%"
+              >
+                Číst dále
+              </Button>
+            </Link>
           </Stack>
         </CardBody>
       </Card>
