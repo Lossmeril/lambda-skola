@@ -20,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+
       <main>
         <Section bgColor="url(/img/zak-ktery-u-nas-stoprocentne-studuje.webp)">
           <Container maxW="container.xl" pr={12}>
@@ -99,15 +99,18 @@ export default function Home() {
               heading="MHD Kacys pomohlo najít kluka z autobusu"
               image="https://www.delta-skola.cz/data/blog-posts/images/orig/dopravni-podnik.webp"
               text={BlogDescs.MHDkacys}
+              link="/blogisek/mhd-kacys"
             />
             <BlogCard
               heading="Už nám nesmrdí umyvadlo"
               image="https://images.unsplash.com/photo-1584961503022-d19acee0af7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=718&q=80"
               text={BlogDescs.Umyvadlo}
+              link="#"
             />
             <BlogCard
               heading="Venda Sigsauer je prostě talent"
               image="https://scontent-lhr8-1.xx.fbcdn.net/v/t1.15752-9/333173556_2150560005141995_5050978864726998452_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=zLh8GGq7HWEAX8jFhKD&_nc_ht=scontent-lhr8-1.xx&oh=03_AdQ2nA4xFjqgFH1HoUdvCl61lrdxcziEaE4_sFmOLShCZg&oe=6491757A"
+              link="#"
             />
           </Wrap>
         </Section>
